@@ -1,0 +1,30 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<header>
+    <div class="container">
+        <h1 class="logo"><a href="../index.html">.LOGO</a></h1>
+        <form class="search-bar">
+            <input type="text" name="search" placeholder="Search for product..." />
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav id="nav-menu">
+            <ul class="list">
+                <li><a href="../pages/login.html">Shop</a></li>
+                <li class="dropdown">
+                    <a href="#" id="cats">Categories <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../pages/men.html">Men</a></li>
+                        <li><a href="../pages/women.html">Women</a></li>
+                    </ul>
+                </li>
+                <li><a href="../pages/login.html" class="login-icon"><i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="../pages/cart.html" class="cart-icon"> <i class="fas fa-shopping-cart"></i> </a></li>
+            </ul>
+        </nav>
+    </div>
+</header>

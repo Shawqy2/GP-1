@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script src="../js/header.js"></script>
+    <!-- <script src="../js/preloader.js"></script> -->
+    <link rel="stylesheet" href="../styles/profile.css">
+    <script defer src="../js/profile.js"></script>
+</head>
+
+<body>
+    <div class="profile-container">
+        <h1>My Profile</h1>
+
+        <div class="profile-header">
+            <div class="profile-pic-container">
+                <img src="../media/images/TEAM.jpg" alt="Profile Picture" class="profile-pic" id="profile-pic">
+                <label for="upload-pic" class="camera-icon">
+                    📷
+                </label>
+                <input type="file" id="upload-pic" accept="image/*" style="display: none;">
+            </div>
+            <div>
+                <h2 id="profile-name">ٍShawqy Hussien</h2>
+                <p>Email: <span id="profile-email">shawqyhussien72@gmail.com</span></p>
+                <p>Phone: <span id="profile-phone">+201155397963</span></p>
+                <p>Address: <span id="profile-address">...</span></p>
+                <button id="edit-profile">Edit Profile</button>
+            </div>
+        </div>
+
+        <h2>Order History</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Date</th>
+                    <th>Items</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#12345</td>
+                    <td>2025-02-10</td>
+                    <td>2 Items</td>
+                    <td>320.00$</td>
+                    <td>Delivered</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+/* ==================================== Header Styling ==================================== */
+
+header {
+    background: white;
+    padding: 25px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    margin: auto;
+    display:flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+/* Logo */
+.logo{
+    position:relative;
+    left: 0;
+}
+.logo a {
+    font-size: 30px;
+    font-weight: bold;
+    color: #6a11cb;
+    text-decoration: none;
+    left: 0;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    flex-grow: 1; 
+}
+
+.search-bar input {
+    width: 60%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    transition: border-color 0.3s;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.search-bar input:focus {
+    border-color: #6a11cb;
+}
+
+.search-bar button {
+    padding: 9.5px 12px;
+    background-color: #6a11cb;
+    border: none;
+    color: white;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #5b0dab;
+}
+
+
+/* Navigation */
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    font-size: 30px;
+    gap: 20px;
+}
+
+nav .list li {
+    /* margin: 0 15px; */
+    position: relative;
+}
+
+nav ul li a {
+    color: #6a11cb;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #4a0da3;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #6a11cb;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu li {
+    display: block;
+    padding: 5px;
+    /* margin: 10px; */
+    /* padding: 10px 20px; */
+}
+
+.dropdown-menu li a {
+    display: block;
+    font-size: 20;
+    padding: 8px;
+    /* padding: 12px 15px; */
+    color: #fff;
+    transition: background 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background: #f4f4f4;
+    color: #4a0da3;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown a i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover a i {
+    transform: rotate(180deg);
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #6a11cb;
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        z-index: 1100;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: max-content;
+        /* max-height: 500px; */
+        background: #f8f8f8;
+        display:flexbox;
+        flex-direction: column;
+        margin-top: 77px;
+        transition: left 0.3s ease-in-out;
+        padding-bottom: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: left;
+        width: 100%;
+    }
+
+    nav ul li {
+        padding: 0 20px;
+        
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 12px;
+        font-size: 18px;
+    }
+
+    nav ul li a:hover{
+        background-color: #6a11cb;
+        color: #f8f8f8;
+    }
+
+    .list{
+        padding-top: 20px;
+    }
+
+    #cats{
+        margin-bottom: 5px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        background: #4a0da3;
+        box-shadow: none;
+        /* padding-left: 15px; */
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    .hamburger-menu.active i {
+        transform: rotate(180deg);
+    }
+
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 900;
+        display: none;
+    }
+
+    .dropdown-menu i{
+        padding: 10px;
+    }
+
+    .menu-overlay.active {
+        display: block;
+    }
+}
