@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script src="../js/preloader.js"></script>
+    <script src="../js/header.js"></script>
+    <link rel="stylesheet" href="../styles/cart.css">
+    <script src="../js/cart.js"></script>
+    <!-- <script defer src="script.js"></script> -->
+</head>
+
+<body>
+    <div class="cart-container">
+        <div class="cart-header">
+            <h1>My Cart</h1>
+            <a class="continue btn" href="../index.html">Continue Shopping <i class="fas fa-shopping-cart"></i></a>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody id="cart-items">
+                
+                <div class="summary">
+                <p>Subtotal: <span id="subtotal">0$</span></p>
+                <p>Shipping: <span id="shipping-cost">Free</span></p>
+                <p>Total: <span id="total">0$</span></p>
+                <button id="checkout">Checkout</button>
+            </div>
+            </tbody>
+
+            
+    </div>
+</body>
+
+
+</html>
